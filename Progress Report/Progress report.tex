@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+
+\usepackage{fontspec,fullpage}
+\setmainfont[Ligatures=TeX]{Garamond}
+\setmonofont[Scale=0.9]{Source Code Pro}
+
+\begin{document}
+\title{Perfidious Banking Group, ANS\\Progress Report}
+\author{Liam Kelley and Shayan Amir-Kabirian}
+\maketitle
+
+Progress on our \emph{totally legitimate} ATM program is going exceedingly well. We have all of the basic functionality in there already; the only features we have left to implement are additional features that can best be described as easter eggs. These vital menu functions have all been coded:
+\begin{description}
+	\item[Deposit] Inputs an amount of money and transfers it into the desired account. After the deposit is done, it asks if the user would like another deposit.
+	\item[Withdrawal] Inputs an amount of money in multiples of €20 (up to €240) and ``gives'' it to the user in the form of ``physical'' ``money.'' The source of the money can be either account.
+	\item[Fast Cash €100] Withdraws €100 from checking and ``gives'' it to the player in ``physical'' form.
+	\item[Check Balance] Displays the current amount in each account (in one screen).
+	\item[Transfer Balance] Inputs an amount of money and transfers it from one account to the other. The user chooses from which account the money is transferred and therefore to which account the money goes.
+\end{description}
+The program itself has several features that serve the typical program function but are done in a more advanced manner in the code. For instance, the account balances are read from a file and outputted back to that file when the program exits. Between those two steps, the account balances are stored as variables. The values of the PINs are also stored in a text file.
+
+The easter eggs come into play primarily in the form of administrator options. There are four PINs stored in \texttt{pins.txt}, which correspond to  the ``normal user'' PIN of \texttt{1234}, and three administrator PINs that cause the program to recognize us (and a friend of ours) by name. Any of the administrator PINs cause the program to add an administrator option to the menu. The admin menu is the primary task left to do, and will likely include options such as ``Quick Embezzle €1000'' and ``Money Laundering.'' Obviously, these options will not be made available to the ``normal users.'' They will be made available to admins, who have their own account text file separate from the other users.
+
+\end{document}
